@@ -26,10 +26,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    repositories {
+
+        flatDir {
+
+            dirs'libs'
+
+        }
+
+    }
 }
 
 dependencies {
-    implementation(fileTree("libs"))
+    implementation (name: 'rtcengine-3.24.101', ext: 'aar')
+//    implementation(fileTree("libs"))
 
 
     implementation 'androidx.appcompat:appcompat:1.1.0'

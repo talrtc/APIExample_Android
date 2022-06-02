@@ -38,8 +38,8 @@ android {
 }
 
 dependencies {
-    implementation (name: 'rtcengine-3.24.101', ext: 'aar')
-//    implementation(fileTree("libs"))
+    // implementation (name: 'rtcengine-3.24.101', ext: 'aar')
+    implementation(fileTree("libs"))
 
 
     implementation 'androidx.appcompat:appcompat:1.1.0'

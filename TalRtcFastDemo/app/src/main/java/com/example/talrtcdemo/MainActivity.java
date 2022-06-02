@@ -42,7 +42,14 @@ public class MainActivity extends Activity {
         muserId = String.valueOf(rand.nextInt(100000));
 
         mRTCEngine = new RTCEngine(MainActivity.this, mListener);
-        mRTCEngine.init(RTCEngine.EngineType.OMNI, Long.parseLong(muserId), mAppId, mroomId);//非token鉴权
+
+        RTCEngine.EnterConfig config = new RTCEngine.EnterConfig();
+        config.uid = Long.parseLong(muserId);
+        config.appId = mAppId;
+        config.roomId = mroomId;
+        config.engineType = RTCEngine.EngineType.OMNI;
+        mRTCEngine.init(config);
+
 //        mRTCEngine.setVideoEncoderConfiguration(480, 640, 15, 200, RTCEngine.RTC_ORIENTATION_MODE.RTC_ORIENTATION_MODE_ADAPTIVE);
 //        mRTCEngine.setRecordingAudioParameters(16000, 1);
         SurfaceView view = mRTCEngine.createRendererView();

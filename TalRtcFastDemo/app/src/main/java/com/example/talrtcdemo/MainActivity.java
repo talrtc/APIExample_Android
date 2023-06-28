@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
     /**
      * 替换成申请到的appID
      */
-    private String mAppId = "d46144";
+    private String mAppId = "bc22d5";
 
     private FrameLayout videoLayout;
 
